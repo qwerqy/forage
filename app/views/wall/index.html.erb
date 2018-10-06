@@ -1,15 +1,9 @@
-<div class="cover">
-  <h1 class="display-1 text-center text-light">forage</h1>
-</div>
-
-<div class="postaseed">
+<nav class="navbar navbar-light bg-white mb-3">
+  <a class="navbar-brand">Forage</a>
   <%= render partial: 'seed/form'%>
-  <!-- <%=link_to reloader_path, remote: true do %>
-  <i class="refresh text-black-50 fas fa-redo"></i>
-  <% end %> -->
-</div>
+</nav>
 
-<div class="seedwall grid">
+<div class="seedwall grid container-fluid">
   <%= render partial: 'wall/show'%>
 </div>
 
@@ -17,6 +11,7 @@
 $('.grid').packery({
   itemSelector: '.grid-item',
   percentPosition: true,
+  gutter: 14.7,
   originTop: true,
   stagger: 30
 });
