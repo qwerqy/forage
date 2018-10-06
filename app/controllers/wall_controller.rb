@@ -4,7 +4,7 @@ class WallController < ApplicationController
 
   def reloader
     respond_to do |format|
-      format.html { render partial: 'wall/show'}
+      format.js
     end
   end
 end

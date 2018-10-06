@@ -1,10 +1,10 @@
 <%Seed.order(created_at: :desc).each do |seed|%>
-<div class="card m-3">
-  <div class="card-body">
-    <h3 class="card-text text-center"><%=seed.description%></h3>
+  <div class="card grid-item">
+    <div class="card-body">
+      <h5 class="card-text text-center"><%=truncate(seed.description, length:100)%></h5>
+    </div>
+    <div class="card-footer py-1">
+      <p class="m-0 created-at text-muted text-right"><%=seed.created_at.strftime('%-d %b - %l:%M%P')%></p>
+    </div>
   </div>
-  <div class="card-footer">
-    <span class="text-muted"><%=seed.created_at.strftime('%-d %b - %l:%M%P')%></span>
-  </div>
-</div>
 <%end%>

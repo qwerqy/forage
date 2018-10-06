@@ -17,3 +17,6 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+  $('input[name="commit"]').bind('ajax:complete', function(event,xhr,status){
+    $(this).val('');
+  })
