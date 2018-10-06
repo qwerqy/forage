@@ -1,12 +1,26 @@
-<%=form_with scope: :seed, url: seed_index_path do |f|%>
-  <%=f.text_area :description%>
-  <%=f.submit%>
-<%end%>
+<div class="cover">
+  <h1 class="display-1 text-center text-light">forage</h1>
+</div>
 
-<ul>
-  <%Seed.all.each do |seed|%>
-  <li>
-    <%=seed.description%>
-  </li>
-  <%end%>
-</ul>
+<div class="postaseed">
+  <%= render partial: 'seed/form'%>
+</div>
+
+<div class="seedwall d-flex flex-wrap flex-row justify-content-center">
+  <%= render partial: 'wall/show'%>
+</div>
+
+<script>
+  $(document).on('turbolinks:load', function() {
+    setInterval(function(){
+      $.ajax({
+        url: '/reloader',
+        method: 'GET',
+        dataType: 'html',
+        success: function(data) {
+          $('.seedwall').html(data)
+        }
+      });
+    }, 10000);
+  })
+</script>
