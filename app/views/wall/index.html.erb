@@ -12,6 +12,10 @@
 
 <script>
   $(document).on('turbolinks:load', function() {
+    $('input[name="commit"]').bind('ajax:complete', function(event,xhr,status){
+      $(this).val('');
+    })
+
     setInterval(function(){
       $.ajax({
         url: '/reloader',
