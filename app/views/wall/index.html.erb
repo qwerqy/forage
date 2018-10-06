@@ -1,0 +1,12 @@
+<%=form_with scope: :seed, url: seed_index_path do |f|%>
+  <%=f.text_area :description%>
+  <%=f.submit%>
+<%end%>
+
+<ul>
+  <%Seed.all.each do |seed|%>
+  <li>
+    <%=seed.description%>
+  </li>
+  <%end%>
+</ul>
