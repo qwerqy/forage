@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root 'wall#index'
 
   resources :seed, only: [:create, :show]
+  get '/reloader' => 'wall#reloader'
 end
