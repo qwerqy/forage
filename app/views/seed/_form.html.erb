@@ -1,0 +1,6 @@
+<%=form_with scope: :seed, url: seed_index_path, class: 'form-inline d-flex justify-content-center' do |f|%>
+  <div class="form-group mx-3 my-3">
+    <%=f.text_field :description, class: 'form-control mr-3'%>
+    <%=f.submit "Send", class: 'btn btn-outline-secondary'%>
+  </div>
+<%end%>
