@@ -15,7 +15,7 @@ class WallIndex extends Component {
   render () {
     return (
       <div>
-        <NavBar />
+        <NavBar seeds={this.state.seeds} />
         <SeedWall seeds={this.state.seeds} />
       </div>
     );

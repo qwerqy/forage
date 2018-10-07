@@ -8,6 +8,7 @@ class NavBar extends Component {
     this.handleUserInput = this.handleUserInput.bind(this);
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.state = {
+      seeds: this.props.seeds,
       description: ''
     }
   }

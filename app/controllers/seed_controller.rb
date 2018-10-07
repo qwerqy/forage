@@ -2,10 +2,9 @@ class SeedController < ApplicationController
   def create
     @seed = Seed.new(seed_params)
     if @seed.save
-      redirect_back(fallback_location: root_path)
+      redirect_to root_path
     else
-      flash[:danger] = "Something went wrong (#{@seed.errors.full_messages.to_sentence})"
-      redirect_back(fallback_location: root_path)
+      render json: @seed.errors, status: :unprocessable_entity
     end
   end
 
