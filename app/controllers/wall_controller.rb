@@ -1,5 +1,6 @@
 class WallController < ApplicationController
   def index
+    @seeds = Seed.all
   end
 
   def reloader

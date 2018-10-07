@@ -3,16 +3,4 @@
   <%= render partial: 'seed/form'%>
 </nav>
 
-<div class="seedwall grid container-fluid">
-  <%= render partial: 'wall/show'%>
-</div>
-
-<script>
-$('.grid').packery({
-  itemSelector: '.grid-item',
-  percentPosition: true,
-  gutter: 14.7,
-  originTop: true,
-  stagger: 30
-});
-</script>
+<%= react_component("SeedWall", {seeds: @seeds}) %>
