@@ -3,9 +3,13 @@ import PropTypes from "prop-types";
 
 class SeedCard extends Component {
   render () {
+    let search = this.props.search
+    let filteredseeds = this.props.seeds.filter(function(seed) {
+      return seed.description.toLowerCase().indexOf(search.toLowerCase()) !== -1;
+    })
     return (
       <React.Fragment>
-        {this.props.seeds.map(function(seed) {
+        {filteredseeds.map(function(seed) {
           return (
             <div key={seed.id} className="card bg-grey border-0 grid-item">
               <div className="card-body pb-1">
