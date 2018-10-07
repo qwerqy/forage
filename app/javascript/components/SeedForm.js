@@ -6,6 +6,7 @@ class SeedForm extends React.Component {
   constructor() {
     super()
     this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(e) {
@@ -16,9 +17,14 @@ class SeedForm extends React.Component {
     this.props.onUserInput(obj);
   }
 
+  handleSubmit(e) {
+    e.preventDefault();
+    this.props.onFormSubmit();
+  }
+
   render() {
     return (
-      <form className='form-inline d-flex justify-content-center'>
+      <form onSubmit={this.handleSubmit} className='form-inline d-flex justify-content-center'>
         <input name='description'
                className= 'form-control mr-3'
                placeholder='What do you want to plant?'

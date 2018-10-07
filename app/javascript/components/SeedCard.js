@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 class SeedCard extends Component {
   render () {
     return (
-      <div>
+      <React.Fragment>
         {this.props.seeds.map(function(seed) {
           return (
             <div key={seed.id} className="card grid-item">
@@ -14,7 +14,7 @@ class SeedCard extends Component {
             </div>
           )
         })};
-      </div>
+      </React.Fragment>
     );
   };
 };

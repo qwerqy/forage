@@ -3476,6 +3476,11 @@ isstream@~0.1.2:
   resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
   integrity sha1-R+Y/evVa+m+S4VAOaQ64uFKcCZo=
 
+jquery.csrf@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/jquery.csrf/-/jquery.csrf-0.1.0.tgz#e3d6137e340b350f00c3ff1b97cd51b16ae70532"
+  integrity sha1-49YTfjQLNQ8Aw/8bl81RsWrnBTI=
+
 js-base64@^2.1.8, js-base64@^2.1.9:
   version "2.4.9"
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.4.9.tgz#748911fb04f48a60c4771b375cac45a80df11c03"

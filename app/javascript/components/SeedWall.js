@@ -11,10 +11,10 @@ class SeedWall extends Component {
 
     document.body.appendChild(script)
   }
-
+  
   render () {
     return (
-      <div className="seedwall grid container-fluid">
+      <div id="seedWall" className="seedwall grid container-fluid">
         <SeedCard seeds={this.props.seeds} />
       </div>
     );
