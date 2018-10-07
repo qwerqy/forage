@@ -1,6 +1,2 @@
-<nav class="navbar navbar-light bg-white mb-3">
-  <a class="navbar-brand">Forage</a>
-  <%= render partial: 'seed/form'%>
-</nav>
-
+<%= react_component("NavBar") %>
 <%= react_component("SeedWall", {seeds: @seeds}) %>

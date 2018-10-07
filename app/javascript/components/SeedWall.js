@@ -1,7 +1,6 @@
-import React, { Component } from "react"
-import PropTypes from "prop-types"
-
-
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import SeedCard from "./SeedCard";
 
 class SeedWall extends Component {
   componentDidMount() {
@@ -12,19 +11,11 @@ class SeedWall extends Component {
 
     document.body.appendChild(script)
   }
-  
+
   render () {
     return (
       <div className="seedwall grid container-fluid">
-        {this.props.seeds.map(function(seed) {
-          return (
-            <div key={seed.id} className="card grid-item">
-              <div className="card-body">
-                <h5 className="card-text text-center">{seed.description}</h5>
-              </div>
-            </div>
-          )
-        })}
+        <SeedCard seeds={this.props.seeds} />
       </div>
     );
   }
