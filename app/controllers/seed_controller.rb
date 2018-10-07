@@ -4,7 +4,7 @@ class SeedController < ApplicationController
     if @seed.save
       redirect_to root_path
     else
-      render json: @seed.errors, status: :unprocessable_entity
+      redirect_to root_path
     end
   end
 

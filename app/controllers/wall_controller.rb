@@ -1,6 +1,6 @@
 class WallController < ApplicationController
   def index
-    @seeds = Seed.all
+    @seeds = Seed.order(created_at: :desc)
   end
 
   def reloader

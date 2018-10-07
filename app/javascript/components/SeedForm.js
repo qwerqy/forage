@@ -24,14 +24,14 @@ class SeedForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit} className='form-inline d-flex justify-content-center'>
+      <form onSubmit={this.handleSubmit} className='mx-auto form-inline d-flex justify-content-center'>
         <input name='description'
                className= 'form-control mr-3'
                placeholder='What do you want to plant?'
                value={this.props.input_description}
                onChange={this.handleChange}
         />
-        <input type='submit' value='Plant' className= 'btn btn-outline-success' />
+      <input type='submit' value='Plant' className= 'btn btn-outline-dark' />
       </form>
     );
   }

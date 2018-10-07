@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+seed = {}
+
+ActiveRecord::Base.transaction do
+  20.times do
+    seed['description'] = Faker::GreekPhilosophers.quote
+
+    Seed.create(seed)
+  end
+end

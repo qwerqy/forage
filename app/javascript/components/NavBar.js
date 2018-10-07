@@ -32,7 +32,7 @@ class NavBar extends Component {
 
   render() {
     return (
-      <nav className="navbar navbar-light bg-white mb-3">
+      <nav className="navbar navbar-light bg-teal mb-3">
         <a className="navbar-brand">Forage</a>
         <SeedForm input_description={this.state.description} onUserInput={this.handleUserInput} onFormSubmit={this.handleFormSubmit} />
       </nav>
