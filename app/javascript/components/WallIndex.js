@@ -7,17 +7,17 @@ class WallIndex extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      seeds: this.props.seeds,
-      input_description: ''
+      seeds: this.props.seeds
     }
   }
 
+
   render () {
     return (
-      <React.Fragment>
-        <NavBar input_description={this.state.input_description}/>
+      <div>
+        <NavBar />
         <SeedWall seeds={this.state.seeds} />
-      </React.Fragment>
+      </div>
     );
   }
 }
