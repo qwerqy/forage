@@ -14,16 +14,26 @@ class WallIndex extends Component {
   }
 
   componentDidMount() {
-    let script = document.createElement('script');
-
-    script.innerHTML = "var pckry = new Packery( '.grid', {itemSelector: '.grid-item', percentPosition: true, gutter: 14.7, originTop: true,  stagger: 30});";
-
-    document.body.appendChild(script)
+    var pckry = new Packery( '.grid', {
+      itemSelector: '.grid-item',
+      percentPosition: true,
+      gutter: 14.7,
+      originTop: true,
+      stagger: 30
+    });
   }
 
   handleInput(input) {
     this.setState({
       search: input
+    }, ()=>{
+      var pckry = new Packery( '.grid', {
+        itemSelector: '.grid-item',
+        percentPosition: true,
+        gutter: 14.7,
+        originTop: true,
+        stagger: 30
+      });
     })
   }
 
